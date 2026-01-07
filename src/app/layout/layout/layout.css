@@ -1,0 +1,4 @@
+.layout-content {
+  min-height: 89%; /* Remaining after navbar */
+  padding: 1rem;
+}
