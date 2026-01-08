@@ -1,15 +1,8 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
 
 .navbar {
   width: 100%;
@@ -25,18 +18,13 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 
   position: relative;
-  overflow: visible;
   z-index: 1000;
 }
+
 .nav-left {
   display: flex;
   align-items: center;
   gap: 26px;
-}
-.skill_nest{
-  font-family: cursive;
-  color: goldenrod;
-
 }
 
 .logo {
@@ -50,11 +38,14 @@ body {
 }
 
 .logo img {
-  height:70px;
+  height: 70px;
   width: auto;
-  display: block;
 }
 
+.skill_nest {
+  font-family: cursive;
+  color: goldenrod;
+}
 
 .nav-item {
   padding: 8px 14px;
@@ -72,16 +63,13 @@ body {
 
 .masterclass {
   color: #ffd966;
-  font-weight: 500;
 }
-
 
 .nav-right {
   display: flex;
   align-items: center;
   gap: 14px;
 }
-
 
 .search-box {
   display: flex;
@@ -99,21 +87,15 @@ body {
   color: white;
   width: 100%;
   margin-left: 8px;
-  font-size: 0.9rem;
 }
-
-.search-box input::placeholder {
-  color: #bdbdbd;
-}
-
 
 .login-btn {
   padding: 8px 18px;
   border-radius: 6px;
   border: 1px solid #ff4d2d;
   color: #ff4d2d;
+  cursor: pointer;
   text-decoration: none;
-  font-weight: 500;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -133,23 +115,27 @@ body {
 
 .mobile-menu {
   position: absolute;
-  top: 64px;          
+  top: 72px;
   left: 0;
   width: 100%;
-
   background: #121212;
   display: flex;
   flex-direction: column;
+  z-index: 9999;
+}
 
-  z-index: 9999;       
+.mobile-menu a {
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.mobile-menu a:hover {
+  background: #2f2f2f;
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    height: 64px;
-    padding: 0 14px;
-  }
-
   .nav-item,
   .search-box,
   .login-btn {
@@ -158,16 +144,5 @@ body {
 
   .menu-btn {
     display: block;
-  }
-  .mobile-menu a {
-    padding: 14px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-bottom: 1px solid #2f2f2f;
-  }
-
-  .mobile-menu a:hover {
-    background: #2f2f2f;
   }
 }
