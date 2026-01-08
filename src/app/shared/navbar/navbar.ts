@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { Login } from '../../login/login/login';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +10,21 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
-menuOpen = false;
+  menuOpen = false;
 
-toggleMenu() {
-  this.menuOpen = !this.menuOpen;
-}
+  constructor(private dialog: MatDialog) {}
 
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
+  openLoginDialog() {
+    this.dialog.open(Login, {
+      width: '1132px',
+      maxWidth: '90vw',
+      height: '70vh',
+      maxHeight: '70vh',
+      disableClose: true,
+    });
+  }
 }

@@ -1,0 +1,22 @@
+<div class="login-dialog-container">
+    <button class="close-btn" (click)="close()" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+    </button>
+    <div class="login-parent d-flex h-100">
+        <div class="login-content w-50">
+            <img src="images/skill_nest_login.png" alt="" srcset="">
+        </div>
+        <div class="login-form w-50">
+            <div class="form-wrapper">
+
+                <h2 class="form-title">Login / Register</h2>
+                <p class="form-label">Please enter your mobile number</p>
+
+                <input type="tel" class="mobile-input" placeholder="Enter mobile number" maxlength="10" />
+
+                <button class="otp-btn" (click)="requestOtp()">Request OTP</button>
+
+            </div>
+        </div>
+    </div>
+</div>

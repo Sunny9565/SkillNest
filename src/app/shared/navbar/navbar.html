@@ -2,24 +2,23 @@
   <div class="nav-left">
     <a routerLink="/" class="logo">
       <img src="images/Skill_nest.png" alt="Logo" />
-      <span class="skill_nest">Skills Nest </span>
+      <span class="skill_nest">Skills Nest</span>
     </a>
-
     <div class="nav-item active">Courses</div>
     <div class="nav-item masterclass">Masterclass</div>
   </div>
-   <button class="menu-btn" (click)="toggleMenu()">☰</button>
+  <button class="menu-btn" (click)="toggleMenu()">☰</button>
   <div class="nav-right">
     <div class="search-box">
       <span class="search-icon">🔍</span>
       <input type="text" placeholder="Search Course" />
     </div>
-
-    <a routerLink="/login" class="login-btn">Login</a>
+    <a class="login-btn" (click)="openLoginDialog()">Login</a>
   </div>
 </nav>
+
 <div class="mobile-menu" *ngIf="menuOpen">
-  <a routerLink="/courses" (click)="menuOpen = false">Courses</a>
-  <a routerLink="/masterclass" (click)="menuOpen = false">Masterclass</a>
-  <a routerLink="/login" (click)="menuOpen = false">Login</a>
+  <a (click)="menuOpen = false">Courses</a>
+  <a (click)="menuOpen = false">Masterclass</a>
+  <a (click)="openLoginDialog(); menuOpen = false">Login</a>
 </div>
